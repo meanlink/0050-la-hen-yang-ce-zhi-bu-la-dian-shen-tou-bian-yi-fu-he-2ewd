@@ -3,3 +3,8 @@ const base='/api/wax-batches';
 export const batches=()=>api(base);
 export const data=(key,part)=>api(`${base}/${key}/${part}`);
 export const save=(key,part,body)=>api(`${base}/${key}/${part}`,part==='readings'?'PUT':'POST',body);
+export const holds=(key)=>api(`${base}/${key}/holds`);
+export const registerHold=(key,body)=>api(`${base}/${key}/holds`,'POST',body);
+export const benchHolds=(bench)=>api('/api/wax-holds'+(bench?`?bench=${encodeURIComponent(bench)}`:''));
+export const sweepHolds=(body)=>api('/api/wax-holds','POST',body);
+export const readingHistory=(key)=>api(`${base}/${key}/readings`);

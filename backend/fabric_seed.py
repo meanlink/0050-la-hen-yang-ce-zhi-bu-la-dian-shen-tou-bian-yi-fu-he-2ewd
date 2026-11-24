@@ -13,4 +13,5 @@ def seed(cx):
                 for run,delta in [(1,-.10),(2,.10)]:
                     cx.execute("INSERT INTO wax_readings VALUES (%s,%s,%s,%s)",(key,mark,run,round(center+delta,2)))
         if key=='WB-82':
-            calculate(cx,key)
+            cx.execute("UPDATE wax_batches SET stage='sealed' WHERE code=%s",(key,))
+            calculate(cx,key,0)
