@@ -1,0 +1,5 @@
+:root{--s-page:oklch(93% .045 72);--s-panel:oklch(97% .022 68);--s-accent:oklch(39% .12 42);--s-ink:oklch(24% .04 55)}
+.swatch-roll{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.65rem}
+.swatch{padding:1.2rem;background:var(--s-panel);border:4px double var(--s-line)}
+.rulebook{border-inline-start:3px solid var(--s-accent);padding-inline-start:1rem}
+.measure-pair label{display:inline-grid;margin-inline-end:.8rem;max-width:9rem}
